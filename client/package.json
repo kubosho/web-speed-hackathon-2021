@@ -66,5 +66,6 @@
     "ignoreDeps": [
       "dev"
     ]
-  }
+  },
+  "browserslist": "last 1 Chrome major version"
 }
