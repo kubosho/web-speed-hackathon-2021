@@ -88,6 +88,34 @@ const config = {
       path: false,
     },
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        framework: {
+          name: 'framework',
+          chunks: 'all',
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          priority: 60,
+        },
+        time: {
+          name: 'time',
+          chunks: 'all',
+          test: /[\\/]node_modules[\\/](moment)[\\/]/,
+          priority: 40,
+        },
+        vendor: {
+          name: 'vendor',
+          chunks: 'all',
+          test: (module) => {
+            return module.context && module.context.includes('node_modules');
+          },
+          priority: 30,
+          reuseExistingChunk: true,
+        },
+      },
+      maxInitialRequests: 20,
+    },
+  },
 };
 
 module.exports = config;
