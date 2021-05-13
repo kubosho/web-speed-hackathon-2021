@@ -7,7 +7,8 @@ module.exports = {
     postcssImport(),
     tailwindcss(),
     postcssPresetEnv({
-      stage: 3,
+      stage: false,
+      preserve: false,
     }),
   ],
   map: { inline: false },
