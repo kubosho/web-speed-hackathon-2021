@@ -2170,6 +2170,11 @@ clone-deep@^4.0.1:
     kind-of "^6.0.2"
     shallow-clone "^3.0.0"
 
+clone@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
+  integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -2245,6 +2250,11 @@ commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
+commander@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-3.0.2.tgz#6837c3fb677ad9933d1cfba42dd14d5117d6b39e"
+  integrity sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow==
+
 commander@^4.0.1, commander@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
@@ -2276,6 +2286,14 @@ compressible@~2.0.16:
   integrity sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==
   dependencies:
     mime-db ">= 1.43.0 < 2"
+
+compression-webpack-plugin@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-7.1.2.tgz#f9a1ba84d4879693e29726f6884b382940876597"
+  integrity sha512-9DKNW6ILLjx+bNBoviHDgLx6swBhWWH9ApClC9sTH2NoFfQM47BapQfovCm9zjD9v1uZwInF5a925FB9ErGQeQ==
+  dependencies:
+    schema-utils "^3.0.0"
+    serialize-javascript "^5.0.1"
 
 compression@^1.7.4:
   version "1.7.4"
@@ -2640,6 +2658,13 @@ default-gateway@^4.2.0:
   dependencies:
     execa "^1.0.0"
     ip-regex "^2.1.0"
+
+defaults@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
+  integrity sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=
+  dependencies:
+    clone "^1.0.2"
 
 define-properties@^1.1.3:
   version "1.1.3"
@@ -4930,12 +4955,17 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-node-abi@^2.21.0:
+node-abi@^2.21.0, node-abi@^2.7.0:
   version "2.26.0"
   resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.26.0.tgz#355d5d4bc603e856f74197adbf3f5117a396ba40"
   integrity sha512-ag/Vos/mXXpWLLAYWsAoQdgS+gW7IwvgMLOgqopm/DbzAjazLltzgzpVMsFlgmo9TzG5hGXeaBZx2AI731RIsQ==
   dependencies:
     semver "^5.4.1"
+
+node-addon-api@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-1.7.2.tgz#3df30b95720b53c24e59948b49532b662444f54d"
+  integrity sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==
 
 node-addon-api@^3.0.0, node-addon-api@^3.1.0:
   version "3.1.0"
@@ -5015,6 +5045,16 @@ node-releases@^1.1.71:
   version "1.1.71"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
+
+node-zopfli@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/node-zopfli/-/node-zopfli-2.1.4.tgz#fb7f43ce622251ba11451b3e4dac5318d2e5bd61"
+  integrity sha512-5kxbPxNQHbORFBNNf083V7h0dTFy6+C1W4ZA4qTXjpCQqEMzxAQFAOfi6BlCmXAkC/+Vr8d6h0XOmdjvp+9FNw==
+  dependencies:
+    commander "^3.0.0"
+    defaults "^1.0.3"
+    node-addon-api "^1.7.2"
+    prebuild-install "^5.3.5"
 
 noop-logger@^0.1.1:
   version "0.1.1"
@@ -6206,6 +6246,27 @@ postcss@^8.2.10, postcss@^8.2.12:
     colorette "^1.2.2"
     nanoid "^3.1.22"
     source-map "^0.6.1"
+
+prebuild-install@^5.3.5:
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.6.tgz#7c225568d864c71d89d07f8796042733a3f54291"
+  integrity sha512-s8Aai8++QQGi4sSbs/M1Qku62PFK49Jm1CbgXklGz4nmHveDq0wzJkg7Na5QbnO1uNH8K7iqx2EQ/mV0MZEmOg==
+  dependencies:
+    detect-libc "^1.0.3"
+    expand-template "^2.0.3"
+    github-from-package "0.0.0"
+    minimist "^1.2.3"
+    mkdirp-classic "^0.5.3"
+    napi-build-utils "^1.0.1"
+    node-abi "^2.7.0"
+    noop-logger "^0.1.1"
+    npmlog "^4.0.1"
+    pump "^3.0.0"
+    rc "^1.2.7"
+    simple-get "^3.0.3"
+    tar-fs "^2.0.0"
+    tunnel-agent "^0.6.0"
+    which-pm-runs "^1.0.0"
 
 prebuild-install@^6.1.1:
   version "6.1.1"
@@ -8038,6 +8099,11 @@ which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
   integrity sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+
+which-pm-runs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/which-pm-runs/-/which-pm-runs-1.0.0.tgz#670b3afbc552e0b55df6b7780ca74615f23ad1cb"
+  integrity sha1-Zws6+8VS4LVd9rd4DKdGFfI60cs=
 
 which@1, which@^1.2.9:
   version "1.3.1"

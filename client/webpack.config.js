@@ -1,9 +1,11 @@
 const path = require('path');
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
-const webpack = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
+const zopfli = require('node-zopfli');
 
 const SRC_PATH = path.resolve(__dirname, './src');
 const PUBLIC_PATH = path.resolve(__dirname, '../public');
@@ -71,6 +73,12 @@ const config = {
     }),
     new MomentLocalesPlugin({
       localesToKeep: ['ja'],
+    }),
+    new CompressionPlugin({
+      test: /\.(css)|(js)$/,
+      algorithm(input, compressionOptions, callback) {
+        return zopfli.gzip(input, compressionOptions, callback);
+      },
     }),
   ],
   resolve: {
