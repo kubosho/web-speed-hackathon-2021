@@ -9,11 +9,8 @@ import { staticRouter } from './routes/static';
 
 const app = Express();
 
-app.set('trust proxy', true);
-
 app.use(
   session({
-    proxy: true,
     resave: false,
     saveUninitialized: false,
     secret: 'secret',
