@@ -1,7 +1,6 @@
+import React from 'react';
 import chunk from 'lodash.chunk';
 import mean from 'lodash.mean';
-import zip from 'lodash.zip';
-import React from 'react';
 
 /**
  * @typedef {object} Props
@@ -29,7 +28,7 @@ const SoundWaveSVG = ({ soundData }) => {
     const rightData = buffer.getChannelData(1).map(Math.abs);
 
     // 左右の音声データの平均を取る
-    const normalized = zip(leftData, rightData).map(mean);
+    const normalized = [...leftData, ...rightData].map(mean);
     // 100 個の chunk に分ける
     const chunks = chunk(normalized, Math.ceil(normalized.length / 100));
     // chunk ごとに平均を取る
