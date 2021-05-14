@@ -68,7 +68,7 @@ const config = {
       filename: 'styles/[name].css',
     }),
     new HtmlWebpackPlugin({
-      inject: true,
+      inject: false,
       template: path.resolve(SRC_PATH, './index.html'),
     }),
     new MomentLocalesPlugin({
